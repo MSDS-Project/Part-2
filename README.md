@@ -21,7 +21,6 @@ There was still a bit of data cleaning/preparation required that was discovered 
 ![](image2.png)
 
 The individual scores were totaled and counted, and the average score was calculated. A new dataset was created dropping the individual scores allowing the data to be processed more quickly. The new file contains the following variables:<br>
-<class 'pandas.core.frame.DataFrame'><br>
 <table style="width:100%">
   <tr>
     <th>Variable Name</th>
@@ -61,27 +60,33 @@ The individual scores were totaled and counted, and the average score was calcul
      <td>average of the scores given (0-10)</td>
   </tr>    
 </table>
-|Variable|Description|
-|--|--|
-|meet      | name of the meet|
-|event     | name of the event|
-|judge     | name of the judge|
-|d_team    | team the diver is on|
-|same      | flag = 1 is judge on same team (0-2)|
-|year      | year the meet was held (2016-2018)|
-|t_score   | total of scores given (0-110)|
-|score_cnt | total number of scores given (1-11)|
-|ave_score | average of the scores given (0-10)|
 
 The data file for the second method of analysis was created by running an external python program found in create_scores_file. This program should be run to generate the data file before running the Jupyter notebook file. This creates a file containing the variables:<br>
-|Variable|Description|
-|--|--|
-|meet  | name of the meet |
-|event | name of the event |
-|score | score given to diver |
-|same  | flag indicating affiliation |
-|year  | year the meet was held |
-
+<table style="width:100%">
+  <tr>
+    <th>Variable Name</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>meet</td>
+    <td>name of the meet</td> 
+  </tr>
+  <tr>
+    <td>event</td>
+    <td>name of the event</td> 
+  </tr>
+  <tr>
+    <td>score</td>
+    <td> score given to diver</td>
+  <tr>
+    <td>same</td>
+    <td>flag: 1 = judge/diver on same team {0-2)</td>
+  </tr>
+  <tr>
+    <td>year</td>
+    <td>year the meet was held (2016-2018)</td>
+  </tr>
+</table>
 
 For the third method where individual judges were compared, the format was:<br>
 
