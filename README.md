@@ -93,14 +93,44 @@ For the third method where individual judges were compared, the data format was:
 ![](image3.png)
 
 Each record contained the following:<br>
-Judge – name of the judge<br>
-S_T_Score – total of the scores given for divers on the same team<br>
-S_Score_Cnt – count of the number of the scores given for divers on the same team<br>
-S_Ave_Score – average of the scores given for divers on the same team (S_T_Score/ S_Score_Cnt)<br>
-D_T_Score – total of the scores given for divers on a different team<br>
-D_Score_Cnt – count of the number of the scores given for divers on a different team<br>
-D_Ave_Score – average of the scores given for divers on a different team (S_T_Score/ S_Score_Cnt)<br>
-Score_Diff – difference between S_Ave_Score and D_Ave_Score (S_Ave_Score -  D_Ave_Score)<br>
+<table style="width:100%">
+  <tr>
+    <th>Variable Name</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>Judge</td>
+    <td>name of the judge</td>
+  </tr>
+  <tr>
+    <td>S_T_Score</td>
+    <td>total of the scores given for divers on the same team</td>
+  </tr>
+  <tr>
+    <td>S_Score_Cnt</td>
+    <td>count of the number of the scores given for divers on the same team</td>
+  </tr>
+  <tr>
+    <td>S_Ave_Score</td>
+    <td>average of the scores given for divers on the same team (S_T_Score/ S_Score_Cnt)</td>
+  </tr>
+  <tr>
+    <td>D_T_Score</td>
+    <td>total of the scores given for divers on a different team</td>
+  </tr>
+  <tr>
+    <td>D_Score_Cnt</td>
+    <td>count of the number of the scores given for divers on a different team</td>
+  </tr>
+  <tr>
+    <td>D_Ave_Score</td>
+    <td>average of the scores given for divers on a different team (S_T_Score/ S_Score_Cnt)</td>
+  </tr>
+  <tr>
+    <td>Score_Diff</td>
+    <td>difference between S_Ave_Score and D_Ave_Score (S_Ave_Score -  D_Ave_Score)</td>
+  </tr>
+</table>
 
 ### The Results:
 The following results were obtained when we looked at the average score per record and when the scores were separated out so that each score given was its own record. In both cases, the scores given to divers on the same team as the judge/coach were higher than the scores given to divers on a different team.<br>
