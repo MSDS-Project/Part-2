@@ -13,9 +13,13 @@ The third method was to create a record for each judge/coach that gave scores to
 ### The Data:
 The data collection and preliminary cleaning was completed in Phase 1 of this project. The data file generated from that process is used as the input file for this phase of the project. For more information on that process, see https://github.com/MSDS-Project/Part1 and https://youtu.be/wPxwS7wc7lI. <br>
 The data collected comes from advancement meets, which are meets where a certain number of the highest placing divers advance to the next meet. These meets are the regional and zone meets. There are 12 regions and 6 zones in the USA resulting in 18 meets a year with data collected for three years, 2016, 2017, and 2018 resulting in 54 meets. There is a maximum of 24 events for which data has been collected. These events are grouped by age, gender, and board-1M, 3M, platform. The data collected includes the meet name, meet date, event name, the judge giving the score, the scores that judge gave up to a maximum of 11, any scores not given contain Nan, the diver name, diver team, and a flag named 'same' indicating the relation of the diver team to the judge team. If the diver team and judge team are not the same, the flag value is 0, if the teams are the same, the flag value is 1, and if either the diver team or the judge team is unknown, the flag value is 2. <br>
- 
+
+![](image1.png)
+
 There was still a bit of data cleaning/preparation required that was discovered during the analysis process. The meet name includes the year. There is also a different name for the zone meet for each of the three years. To create consistency in the meet names and to better group the data, the meet name field will be separated into year and meet, and the names will be reduced to simply "Region [X]" and "Zone [Y]". The data file now looks like this:<br>
- 
+
+![](image2.png)
+
 The individual scores were totaled and counted, and the average score was calculated. A new dataset was created dropping the individual scores allowing the data to be processed more quickly. The new file contains the following variables:<br>
 <class 'pandas.core.frame.DataFrame'><br>
 Int64Index: 226408 entries, 0 to 226556<br>
@@ -32,7 +36,9 @@ ave_score    226408 non-null float64	# average of the scores given (0-10)<br>
 dtypes: float64(2), int64(2), object(5)<br>
 
 This was the format of the data used for the first two methods of analysis. For the third method where individual judges were compared, the format was:<br>
- 
+
+![](image3.png)
+
 Each record contained the following:<br>
 Judge – name of the judge<br>
 S_T_Score – total of the scores given for divers on the same team<br>
@@ -45,9 +51,13 @@ Score_Diff – difference between S_Ave_Score and D_Ave_Score (S_Ave_Score -  D_
 
 ### The Results:
 The following results were obtained when we looked at the average score per record and when the scores were separated out so that each score given was its own record. In both cases, the scores given to divers on the same team as the judge/coach were higher than the scores given to divers on a different team.<br>
- 
+
+![](image4.png)
+
 When the data is reorganized so that there is one record for each judge that gave scores to a diver from their own team, and the records grouped by judges who gave higher scores to their own divers and judges who gave lower scores to their own divers, we see that 65% (216 out of 332) of the judges/coaches gave higher scores to their own divers. The judges that scored their own divers lower shows a greater difference in scores than with the judges that scored higher. The 65% of the judges scoring higher are responsible for 73.76% of the total scores given ( (415,157+53,941)/(415,157+53,941+12,183+154,656) ) and 81.58% of the scores given to divers on the same team ( 53,941/(53,941+12,183) ).<br>
- 
+
+![](image5.png)
+
 A statistically significant difference was found between the scores given to divers from the same team as the judge/coach and the score given to a diver from a different team as the judge/coach for all three evaluation methods.<br>
 
 ### Additional Study Possibilities:
