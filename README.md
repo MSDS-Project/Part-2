@@ -22,6 +22,45 @@ There was still a bit of data cleaning/preparation required that was discovered 
 
 The individual scores were totaled and counted, and the average score was calculated. A new dataset was created dropping the individual scores allowing the data to be processed more quickly. The new file contains the following variables:<br>
 <class 'pandas.core.frame.DataFrame'><br>
+<table style="width:100%">
+  <tr>
+    <th>Variable Name</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>meet</td>
+    <td>name of the meet</td> 
+  </tr>
+  <tr>
+    <td>event</td>
+    <td>name of the event</td> 
+  </tr>
+  <tr>
+    <td>judge</td>
+    <td>name of the judge</td>
+  </tr>
+  <tr>
+    <td>d_team</td>
+    <td>name of diver's team</td>
+  </tr>
+  <tr>
+    <td>same</td>
+    <td>flag: 1 = judge/diver on same team {0-2)</td>
+  </tr>
+  <tr>
+    <td>year</td>
+    <td>year the meet was held (2016-2018)</td>
+   <tr>
+     <td>t_score</td>
+     <td>total of scores given (0-110)</td>
+   <tr>
+     <td>score_cnt</td>
+     <td>number of scores given in this record (1-11)</td>
+   <tr>
+     <td>ave_score</td>
+     <td>average of the scores given (0-10)</td>
+  </tr>    
+</table>
 |Variable|Description|
 |--|--|
 |meet      | name of the meet|
