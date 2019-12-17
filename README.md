@@ -35,7 +35,7 @@ score_cnt    226408 non-null int64	# total number of scores given (1-11)<br>
 ave_score    226408 non-null float64	# average of the scores given (0-10)<br>
 dtypes: float64(2), int64(2), object(5)<br>
 
-The data file for the second method of analysis was created by running an external python program found in .... This program should be run to generate the data file before running the Jupyter notebook file. THis creates a file containing the variables:
+The data file for the second method of analysis was created by running an external python program found in create_scores_file. This program should be run to generate the data file before running the Jupyter notebook file. THis creates a file containing the variables:
 meet        	# name of the meet<br>
 event        	# name of the event<br>
 score         # score<br>
