@@ -1,0 +1,66 @@
+########
+# Code used to create the individual scores file
+# needs to run before running notebook code
+########
+import pandas as pd
+import csv
+
+# Open the file to be created 
+with open('divemeets_scores_data.csv', 'w') as csvwfile:
+   # Define the field/column names for the new file
+   fieldnames = ['meet', 'event', 'score', 'same']
+   # write out the headers/column names for the new file
+   writer = csv.DictWriter(csvwfile, fieldnames=fieldnames)
+   writer.writeheader()
+   #open the data file as read only
+   with open('divemeets_final_data.csv', 'r') as csvfile:
+      # define the delimiter as a comma
+      data_org = csv.reader(csvfile, delimiter=',')
+      # initialize the count for the rows
+      row_cnt = 0
+      # go through each row in the input file
+      for row in data_org:
+         # initialize the count for the number of scores collected
+         cnt = 0
+         # skip the header row, then start getting scores
+         if row_cnt > 0:
+            # Start at column 5 where the scores start – look at each score field
+            # if the score field is >= 0 (not null), save the score, add to count of scores
+            if row[5]>= '0':
+               writer.writerow({'meet':row[1], 'event':row[3], 'score':row[5], 'same':row[18]})
+               cnt = cnt + 1
+            if row[6]>= '0':
+               writer.writerow({'meet':row[1], 'event':row[3], 'score':row[6], 'same':row[18]})
+               cnt = cnt + 1
+            if row[7]>= '0':
+               writer.writerow({'meet':row[1], 'event':row[3], 'score':row[7], 'same':row[18]})
+               cnt = cnt + 1
+            if row[8]>= '0':
+               writer.writerow({'meet':row[1], 'event':row[3], 'score':row[8], 'same':row[18]})
+               cnt = cnt + 1
+            if row[9]>= '0':
+               writer.writerow({'meet':row[1], 'event':row[3], 'score':row[9], 'same':row[18]})
+               cnt = cnt + 1
+            if row[10]>= '0':
+               writer.writerow({'meet':row[1], 'event':row[3], 'score':row[10], 'same':row[18]})
+               cnt = cnt + 1
+            if row[11]>= '0':
+               writer.writerow({'meet':row[1], 'event':row[3], 'score':row[11], 'same':row[18]})
+               cnt = cnt + 1
+            if row[12]>= '0':
+               writer.writerow({'meet':row[1], 'event':row[3], 'score':row[12], 'same':row[18]})
+               cnt = cnt + 1
+            if row[13]>= '0':
+               writer.writerow({'meet':row[1], 'event':row[3], 'score':row[13], 'same':row[18]})
+               cnt = cnt + 1
+            if row[14]>= '0':
+               writer.writerow({'meet':row[1], 'event':row[3], 'score':row[14], 'same':row[18]})
+               cnt = cnt + 1
+            if row[15]>= '0':
+               # also make sure score11 is <= 10 – some records have an error here
+               if row[15]<= '10':
+                  writer.writerow({'meet':row[1], 'event':row[3], 'score':row[15], 'same':row[18]})
+                  cnt = cnt + 1  
+      
+         print('records added = ', cnt)
+         row_cnt = row_cnt + 1
