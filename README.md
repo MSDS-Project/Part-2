@@ -88,7 +88,7 @@ The data file for the second method of analysis was created by running an extern
   </tr>
 </table>
 
-For the third method where individual judges were compared, the format was:<br>
+For the third method where individual judges were compared, the data format was:<br>
 
 ![](image3.png)
 
