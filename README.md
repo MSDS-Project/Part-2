@@ -22,25 +22,26 @@ There was still a bit of data cleaning/preparation required that was discovered 
 
 The individual scores were totaled and counted, and the average score was calculated. A new dataset was created dropping the individual scores allowing the data to be processed more quickly. The new file contains the following variables:<br>
 <class 'pandas.core.frame.DataFrame'><br>
-Int64Index: 226408 entries, 0 to 226556<br>
-Data columns (total 9 columns):<br>
-meet         226408 non-null object	# name of the meet<br>
-event        226408 non-null object	# name of the event<br>
-judge        226408 non-null object	# name of the judge<br>
-d_team       226408 non-null object	# team the diver is on<br>
-same         226408 non-null int64	# flag = 1 is judge on same team (0-2)<br>
-year         226408 non-null object	# year the meet was held (2016-2018)<br>
-t_score      226408 non-null float64	# total of scores given (0-110)<br>
-score_cnt    226408 non-null int64	# total number of scores given (1-11)<br>
-ave_score    226408 non-null float64	# average of the scores given (0-10)<br>
-dtypes: float64(2), int64(2), object(5)<br>
+|Variable|Description|
+|--|--|
+|meet      | name of the meet|
+|event     | name of the event|
+|judge     | name of the judge|
+|d_team    | team the diver is on|
+|same      | flag = 1 is judge on same team (0-2)|
+|year      | year the meet was held (2016-2018)|
+|t_score   | total of scores given (0-110)|
+|score_cnt | total number of scores given (1-11)|
+|ave_score | average of the scores given (0-10)|
 
-The data file for the second method of analysis was created by running an external python program found in create_scores_file. This program should be run to generate the data file before running the Jupyter notebook file. THis creates a file containing the variables:
-meet        	# name of the meet<br>
-event        	# name of the event<br>
-score         # score<br>
-same          # flag indicating affiliation<br>
-year          # year the meet was held<br><br>
+The data file for the second method of analysis was created by running an external python program found in create_scores_file. This program should be run to generate the data file before running the Jupyter notebook file. This creates a file containing the variables:<br>
+|Variable|Description|
+|--|--|
+|meet  | name of the meet |
+|event | name of the event |
+|score | score given to diver |
+|same  | flag indicating affiliation |
+|year  | year the meet was held |
 
 
 For the third method where individual judges were compared, the format was:<br>
